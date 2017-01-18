@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'test_project.wsgi.application'
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }'''
-#from mongoengine import *
+from mongoengine import *
 
 DATABASES = {
     'default': {
@@ -93,7 +93,7 @@ DATABASES = {
     }
 }
 
-#connect('employeedb')
+connect('employeedb')
 
 import dj_database_url
 DATABASES['default'] = dj_database_url.config()
